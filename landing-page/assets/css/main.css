@@ -19,7 +19,6 @@ body {
   text-align: center;
   min-height: 100vh;
   overflow-x: hidden;
-  background-image: url('../img/wood-texture.jpg');
   position: relative;
 }
 
@@ -295,7 +294,7 @@ body::after {
 }
 
 /* --- RESPONSIVE --- */
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   header h1 { font-size: 2rem; }
   h2 { font-size: 1.4rem; }
   .button {
