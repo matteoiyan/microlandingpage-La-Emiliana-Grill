@@ -295,7 +295,7 @@ body::after {
 }
 
 /* --- RESPONSIVE --- */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   header h1 { font-size: 2rem; }
   h2 { font-size: 1.4rem; }
   .button {
