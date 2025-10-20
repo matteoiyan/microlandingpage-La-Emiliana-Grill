@@ -19,6 +19,7 @@ body {
   text-align: center;
   min-height: 100vh;
   overflow-x: hidden;
+  background-image: url('../img/wood-texture.jpg');
   position: relative;
 }
 
@@ -294,9 +295,14 @@ body::after {
 }
 
 /* --- RESPONSIVE --- */
-@media (max-width: 1000px) {
-  header h1 { font-size: 2rem; }
-  h2 { font-size: 1.4rem; }
+@media (max-width: 1200px) {
+  header h1 { font-size: 3rem; }
+  h2 { font-size: 2rem; }
+
+  main, header, footer {
+    max-width: 1600px;
+    padding: 2rem;
+  }
   .button {
     width: 80%;
     margin: 0.5rem auto;
@@ -315,7 +321,7 @@ body::after {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1200px) {
   header h1 { font-size: 1.6rem; }
   header p { font-size: 1rem; }
   section p { font-size: 0.95rem; }
