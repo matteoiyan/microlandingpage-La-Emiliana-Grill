@@ -75,7 +75,7 @@ header h1 {
   display: inline-block;
 }
 
-/* 🔥 Línea brillante estilo fuego */
+/*  Línea brillante estilo fuego */
 header h1::after {
   content: "";
   position: absolute;
@@ -241,6 +241,27 @@ body::after {
   animation: smoke 18s infinite ease-in-out;
   z-index: 1;
   pointer-events: none;
+}
+.grid-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 16px;
+  padding: 16px;
+}
+.evento-image{
+  width: 100%;
+  height: 500px;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-top: 1rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+  animation: fadeIn 1.5s ease-in-out;
+    transition: transform 0.3s ease-in-out, 
+              box-shadow 0.3s ease-in-out;
+}
+.evento-image:hover{
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.35);
 }
 
 @keyframes smoke {
