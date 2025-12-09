@@ -247,10 +247,11 @@ body::after {
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 16px;
   padding: 16px;
+  padding: clamp(12px, 3vw, 24px);
 }
 .evento-image{
   width: 100%;
-  height: 500px;
+  height: clamp(300px, 50vw, 500px);
   border-radius: 12px;
   object-fit: cover;
   margin-top: 1rem;
@@ -262,6 +263,40 @@ body::after {
 .evento-image:hover{
   transform: scale(1.05);
   box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+}
+@media (max-width: 768px) {
+  .grid-container {
+    gap: 12px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+  .evento-image {
+    height: 350px;
+    border-radius: 8px;
+    margin-top: 0.5rem;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .grid-container {
+    gap: 14px;
+  }
+  
+  .evento-image {
+    height: 400px;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .evento-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .evento-image {
+    animation: none;
+    transition: none;
+  }
 }
 
 @keyframes smoke {
